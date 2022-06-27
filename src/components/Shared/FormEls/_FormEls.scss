@@ -1,0 +1,189 @@
+.formEl1 {
+  background-color: var(--dark2);
+  border: 0;
+  color: white;
+  padding: 0.8em 0.6em;
+  font-size: 1.2em;
+  border-radius: 4px;
+  width: 100%;
+}
+.formEl2 {
+  width: 15em;
+  color: var(--text);
+  border-radius: 0.3em;
+  position: relative;
+  > div:first-child {
+    border: 1.5px solid var(--dark5);
+    background-color: var(--dark2);
+    width: 100%;
+    height: 3em;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.8em;
+    padding-right: 0.7em;
+    border-radius: 0.2em;
+    cursor: pointer;
+  }
+  > ul:last-child {
+    position: absolute;
+    border: 1.5px solid var(--dark5);
+    background-color: var(--dark2);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+    border-radius: 0.4em;
+    box-shadow: 0px 30px 80px -70px var(--purple3);
+    li {
+      border-bottom: 1px solid var(--dark1);
+      padding: 1em 0;
+      cursor: pointer;
+      &:hover {
+        color: var(--purple2);
+      }
+      &:last-of-type {
+        border-bottom-left-radius: 0.4em;
+        border-bottom-right-radius: 0.4em;
+      }
+      &:first-of-type {
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
+      }
+      span {
+        padding-left: 1.5em;
+      }
+    }
+  }
+}
+.formEl3 {
+  width: 15em;
+  position: relative;
+  > div {
+    width: 100%;
+    border: 1.5px solid var(--dark5);
+    border-radius: 4px;
+    background-color: var(--dark2);
+  }
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.25em;
+    cursor: pointer;
+    padding: 0 1.2em;
+    svg {
+      fill: white;
+    }
+  }
+  .datePicker {
+    height: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 4em;
+    padding: 1.5em;
+    > div {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      svg,
+      p {
+        cursor: pointer;
+      }
+    }
+    > div:last-child {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 10px;
+      .disabled {
+        color: var(--gray2);
+        cursor: auto !important;
+      }
+      > div {
+        height: 22.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > p {
+          font-weight: 600;
+          &:hover {
+            color: var(--purple1);
+          }
+        }
+      }
+    }
+    .selected {
+      background-color: var(--purple1);
+      border-radius: 1000px;
+      padding-top: 2.5px;
+      > p {
+        &:hover {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+.formEl4 {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  > div:first-of-type {
+    cursor: pointer;
+    p {
+      margin: 0;
+      display: inline;
+      margin-right: 1em;
+    }
+    svg {
+      transition: 0.3s;
+    }
+  }
+  > .options {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+    background-color: red;
+    border-radius: 5px;
+    background-color: var(--dark2);
+    border-radius: 5px;
+    > div {
+      display: flex;
+      cursor: pointer;
+
+      > div {
+        border-radius: 2px;
+        overflow: hidden;
+        width: 16px;
+        height: 16px;
+        background-color: var(--dark4);
+        margin-right: 12.5px;
+        > div {
+          width: 100%;
+          height: 100%;
+          background-color: var(--purple1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &:hover {
+          outline: 1.5px solid var(--purple1);
+        }
+      }
+    }
+  }
+}

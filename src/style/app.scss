@@ -1,0 +1,76 @@
+@use "../components/Shared/Buttons/Buttons";
+@use "../components/Shared/FormEls/FormEls";
+@use "../components/Shared/Navbar/Navbar";
+@use "../components/Invoices/Invoices";
+@use "../components/Invoices/InvoicesHead.scss";
+@use "../components/Invoices/InvoicesList";
+@use "../components/Shared/AddInvoice/AddInvoice";
+@use "../components/Invoice/Invoice";
+@use "../components/Invoice/InvoiceHead.scss";
+@use "../components/Invoice/InvoiceBody.scss";
+@use "../components/Shared/Other/Other";
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --text: white;
+  --text2: black;
+  --white: white;
+  --purple1: #7c5dfa;
+  --purple2: #9277ff;
+  --purple3: #7e88c3;
+  --red1: #ec5757;
+  --red2: #ff9797;
+  --dark1: #151826;
+  --dark2: #1e2139;
+  --dark3: #252945;
+  --dark4: #373b53;
+  --dark5: #0c0e16;
+  --gray1: #7e88c3;
+  --gray2: #888eb0;
+  --gray3: #f8f8fb;
+  --spartan-font: "League Spartan", sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--dark1);
+  color: var(--text);
+}
+* {
+  font-family: var(--spartan-font);
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+main {
+  height: 100vh;
+}
+.head1 {
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: 0.5px;
+}
+.head2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.head3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.head4 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.text1 {
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+}
+
+.text2 {
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: -0.23px;
+}

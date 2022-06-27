@@ -1,0 +1,134 @@
+.addInvoice {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  left: 103px;
+  overflow-y: scroll;
+  z-index: 1;
+  border-right: 1px solid black;
+  width: 616px;
+  background-color: var(--dark1);
+  padding: 3em 3em;
+  transition: 1s;
+  @media (max-width: 1000px) {
+    left: 0 !important;
+    @media (max-width: 620px) {
+      width: 100%;
+      .groupForm {
+        > div {
+          flex-direction: column !important;
+          > div {
+            margin-top: 1em;
+          }
+        }
+      }
+    }
+  }
+  > div {
+    margin-top: 2.5em;
+  }
+
+  > h1 {
+    margin-bottom: 1.5em;
+  }
+  .groupForm {
+    > p {
+      color: var(--purple1);
+    }
+    > div:nth-child(2) {
+      flex-direction: column;
+      > div {
+        margin-top: 1em;
+      }
+    }
+    > div {
+      display: flex;
+      gap: 3%;
+      width: 100%;
+      margin-top: 1.2em;
+      > div {
+        width: 100%;
+        > p {
+          color: var(--gray1);
+          margin-bottom: 1em;
+        }
+        input {
+          background-color: var(--dark2);
+          border: 0;
+          color: var(--text);
+          padding: 0.8em 0.6em;
+          font-size: 1.2em;
+          border-radius: 4px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .InvoiceDate {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .itemsList {
+    > div {
+      margin-top: 1.5em;
+      @media (max-width: 620px) {
+        > div {
+          flex-wrap: wrap;
+          > div {
+            &:first-of-type {
+              width: 100% !important;
+            }
+            &:nth-of-type(2) {
+              width: 20% !important;
+            }
+            &:last-of-type {
+              width: 30% !important;
+            }
+          }
+        }
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+        > div {
+          width: 100%;
+          &:first-of-type {
+            width: 35%;
+          }
+          &:nth-of-type(2) {
+            width: 15%;
+          }
+          &:last-of-type {
+            width: 25%;
+          }
+          > p {
+            margin-bottom: 0.5em;
+          }
+          > input {
+            background-color: var(--dark2);
+            border: 0;
+            color: var(--text);
+            padding: 0.8em 0.6em;
+            font-size: 1.2em;
+            border-radius: 4px;
+            width: 100%;
+          }
+        }
+        svg {
+          margin-left: 1em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  > div:last-child {
+    display: flex;
+    gap: 1em;
+    direction: rtl;
+  }
+}

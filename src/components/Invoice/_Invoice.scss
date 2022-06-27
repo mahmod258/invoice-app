@@ -1,0 +1,27 @@
+.invoice {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5em;
+
+  > div {
+    max-width: 45.625em;
+    min-width: 20em;
+    @media (max-width: 1000px) {
+      margin: 4em 1em;
+    }
+    > p {
+      cursor: pointer;
+      margin-bottom: 2em;
+      font-weight: 500;
+      > svg {
+        margin-right: 0.75em;
+      }
+    }
+    > div {
+      width: 100%;
+      background-color: var(--dark2);
+      border-radius: 5px;
+    }
+  }
+}

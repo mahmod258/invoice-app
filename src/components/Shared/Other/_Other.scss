@@ -1,0 +1,15 @@
+.div1 {
+  padding: 0.8em 1.6em;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  span {
+    font-weight: 600;
+  }
+  > div {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    margin-right: 0.6em;
+  }
+}

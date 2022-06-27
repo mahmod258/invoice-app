@@ -1,0 +1,56 @@
+.invoiceHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.5em;
+  margin-bottom: 2em;
+  padding: 2em;
+  @media (max-width: 740px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 !important;
+  }
+  > div:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  > div:last-of-type {
+    display: flex;
+    gap: 0.4em;
+  }
+}
+.invoiceHeadMobile {
+  > div {
+    &:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 5.5em;
+      margin-bottom: 2em;
+      padding: 2em;
+      > div:first-of-type {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+      > div:last-of-type {
+        display: flex;
+        gap: 0.4em;
+      }
+    }
+    &:last-of-type {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1em;
+      padding: 1em;
+
+      background-color: var(--dark2);
+    }
+  }
+}
