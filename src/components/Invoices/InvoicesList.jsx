@@ -27,7 +27,7 @@ function Invoices({ invoices, instruFiltringAbtInvoices }) {
           invoices.map((invoice) => {
             return instruFiltringAbtInvoices.includes(invoice.status) ===
               true ? (
-              <Link to={"/invoice-app/" + invoice.key} key={Math.random()}>
+              <Link to={"/" + invoice.key} key={Math.random()}>
                 <div>
                   <p>
                     <span>#</span>
@@ -65,7 +65,7 @@ function Invoices({ invoices, instruFiltringAbtInvoices }) {
         ) : (
           invoices.map((invoice) => {
             return instruFiltringAbtInvoices.includes(invoice.status) ? (
-              <Link to={"/invoice-app/" + invoice.key} key={Math.random()}>
+              <Link to={"/" + invoice.key} key={Math.random()}>
                 <div>
                   <div>
                     <p>
@@ -91,7 +91,7 @@ function Invoices({ invoices, instruFiltringAbtInvoices }) {
           })
         )
       ) : (
-        <div>
+        <div className="invoicesEmpty">
           <svg width="242" height="200" xmlns="http://www.w3.org/2000/svg">
             <g fill-rule="nonzero" fill="none">
               <path
