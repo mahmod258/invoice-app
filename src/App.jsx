@@ -92,7 +92,7 @@ function App() {
   const [invoices, setInvoices] = useState(JSON.parse(localStorage.invoices));
   const location = useLocation();
   const insertInvoice = (newInvoice) => {
-    if (location.pathname === "/invoice-app") {
+    if (location.pathname === "/") {
       newInvoice.key =
         alphabet[Math.floor(Math.random() * alphabet.length)] +
         alphabet[Math.floor(Math.random() * alphabet.length)] +
@@ -104,7 +104,7 @@ function App() {
     } else {
       setInvoices((state) =>
         state.map((invoice) =>
-          "/invoice-app/" + invoice.key === location.pathname
+          "/" + invoice.key === location.pathname
             ? { ...newInvoice, key: invoice.key }
             : invoice
         )
@@ -145,6 +145,15 @@ function App() {
           : invoice;
       })
     );
+    setIsLoading(true);
+    fetch("https://reqres.in/api/users?page=0")
+      .then((respose) => respose.json())
+      .then((respose) => {
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+      });
   }, []);
   useEffect(() => {
     setOpenInvoice(false);
@@ -153,13 +162,6 @@ function App() {
   useEffect(() => {
     setOpenInvoice(false);
   }, [location]);
-  useEffect(() => {
-    setIsLoading(() => {
-      setTimeout(() => {
-        return true;
-      }, 0);
-    });
-  }, []);
 
   return (
     <div id="App">
@@ -188,7 +190,7 @@ function App() {
           ) : null}
           <Routes>
             <Route
-              path="/invoice-app/"
+              path="/"
               element={
                 <Invoices
                   invoices={invoices}
@@ -198,7 +200,7 @@ function App() {
             />
             {invoices.map((invoice) => (
               <Route
-                path={"/invoice-app/" + invoice.key}
+                path={"/" + invoice.key}
                 key={invoice.key}
                 element={
                   <Invoice
